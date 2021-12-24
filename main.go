@@ -7,10 +7,12 @@ type Stack struct {
 	List []int
 }
 
+//add new value in stack
 func (s *Stack) Push(i int) {
 	s.List = append(s.List, i)
 }
 
+//remove last value and returns removed value
 func (s *Stack) Pop() int {
 	last := s.List[len(s.List)-1]
 	s.List = s.List[:len(s.List)-1]
