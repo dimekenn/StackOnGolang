@@ -20,14 +20,23 @@ func (s *Stack) Pop() int {
 }
 
 func main()  {
+	//new copy of structure
 	s := Stack{}
+
+	//displaying copy of structure
 	fmt.Println(s)
+
+	//adding values
 	s.Push(111)
 	s.Push(222)
 	s.Push(333)
 	s.Push(444)
+
 	fmt.Println(s)
+
+	//remove and display values
 	fmt.Println(s.Pop())
 	fmt.Println(s.Pop())
+
 	fmt.Println(s)
 }
