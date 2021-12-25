@@ -12,11 +12,12 @@ func (s *Stack) Push(i int) {
 	s.List = append(s.List, i)
 }
 
-//remove last value and returns removed value
-func (s *Stack) Pop() int {
-	last := s.List[len(s.List)-1]
-	s.List = s.List[:len(s.List)-1]
-	return last
+//remove last value and returns removed index and value
+func (s *Stack) Pop() (int, int) {
+	lastIndex := len(s.List)-1
+	lastValue := s.List[lastIndex]
+	s.List = s.List[:lastIndex]
+	return lastIndex, lastValue
 }
 
 func main()  {
